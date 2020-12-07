@@ -35,6 +35,8 @@ app.use(expressJWT({ secret: config.jwtSecretKey, algorithms: ['HS256'] }).unles
 // 导入并注册用户路由模块
 const userRouter = require('./router/user.js');
 app.use('/api', userRouter);
+const userinfoRouter = require('./router/userinfo.js');
+app.use('/my', userinfoRouter);
 
 // 错误中间件
 const joi = require('@hapi/joi');
