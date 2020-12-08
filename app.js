@@ -37,6 +37,8 @@ const userRouter = require('./router/user.js');
 app.use('/api', userRouter);
 const userinfoRouter = require('./router/userinfo.js');
 app.use('/my', userinfoRouter);
+const artCateRouter = require('./router/artcate.js');
+app.use('/my/article', artCateRouter);
 
 // 错误中间件
 const joi = require('@hapi/joi');
